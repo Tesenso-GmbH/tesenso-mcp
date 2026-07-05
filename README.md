@@ -8,6 +8,8 @@ Connect AI agents to your [ThingsBoard](https://thingsboard.io) IoT platform via
 
 Works with Claude Desktop, Cursor, VS Code Copilot, Claude Code, and any MCP-compatible client.
 
+> **Tesenso fork:** this fork adds ~80 tools for the Tesenso platform (Bewirtschaftung, Energy-Community, Connectors, SIM-Connectivity, Data-Management, AI, plus a generic OpenAPI escape hatch). See [TESENSO.md](TESENSO.md). Tesenso code is strictly additive under `tools/tesenso/` to stay upstream-mergeable.
+
 ## Quick Start
 
 You need a ThingsBoard instance ([Cloud](https://thingsboard.cloud), [EU Cloud](https://eu.thingsboard.cloud), [self-hosted CE/PE](https://thingsboard.io/docs/user-guide/install/installation-options/), or [Edge](https://thingsboard.io/docs/user-guide/install/edge/installation-options/)) and an API key (ThingsBoard 4.3+) or username/password.
