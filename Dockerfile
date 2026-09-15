@@ -1,5 +1,6 @@
 # Stage 1: Build the project using Maven
-FROM maven:3.9.4-eclipse-temurin-21 AS builder
+# Gebaut mit JDK 25, das Bytecode-Ziel bleibt Java 21 (pom.xml); die Laufzeit unten bleibt Java 21.
+FROM maven:3.9-eclipse-temurin-25 AS builder
 
 WORKDIR /app
 COPY . .

@@ -10,12 +10,13 @@
     <description>MCP server for ThingsBoard platform</description>
 
     <properties>
-        <spring-boot.version>3.4.10</spring-boot.version>
+        <!-- Tesenso: Spring AI 1.1 setzt Spring Boot 3.5 voraus; Bau mit JDK 25, Ziel Java 21 (Java-25-Plan, Phase 1.1). -->
+        <spring-boot.version>3.5.16</spring-boot.version>
         <spring.ai.version>1.1.2</spring.ai.version>
         <thingsboard.version>4.3.0PE</thingsboard.version>
-        <lombok.version>1.18.32</lombok.version>
+        <lombok.version>1.18.46</lombok.version>
         <auth0-jwt.version>4.4.0</auth0-jwt.version>
-        <surefire.version>3.2.5</surefire.version>
+        <surefire.version>3.5.6</surefire.version>
         <json-schema-validator.version>2.0.0</json-schema-validator.version>
         <commons-lang3.version>3.18.0</commons-lang3.version> <!-- to fix CVE-2025-48924. TODO: remove when fixed in spring-boot-dependencies -->
     </properties>
@@ -129,9 +130,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.14.1</version>
                 <configuration>
-                    <release>17</release>
+                    <release>21</release>
                     <compilerArgs>
                         <arg>-Xlint:deprecation</arg>
                         <arg>-Xlint:removal</arg>
@@ -160,6 +161,7 @@
                     <argLine>
                         -XX:+UseStringDeduplication -XX:MaxGCPauseMillis=20
                         --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+                        -XX:+EnableDynamicAgentLoading
                     </argLine>
                 </configuration>
             </plugin>
