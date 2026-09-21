@@ -89,6 +89,13 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- Lizenzpruefung: Startsperre ohne gueltige Lizenz. Aus tesenso-server/license-core,
+            derselbe Pruefkern wie in der Plattform. -->
+        <dependency>
+            <groupId>com.tesenso</groupId>
+            <artifactId>license-core</artifactId>
+            <version>4.3.0-tesenso-1.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>

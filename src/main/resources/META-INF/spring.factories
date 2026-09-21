@@ -1,0 +1,2 @@
+# Tesenso: Startsperre ohne gueltige Lizenz (tools/tesenso/license/TesensoLicenseGuardListener)
+org.springframework.context.ApplicationListener=org.thingsboard.ai.mcp.server.tools.tesenso.license.TesensoLicenseGuardListener
