@@ -96,6 +96,14 @@
             <artifactId>license-core</artifactId>
             <version>4.3.0-tesenso-1.0.0</version>
         </dependency>
+        <!-- Tesenso: LicenseGuard liest die Kennung des PostgreSQL-Servers der Plattform fuer die
+            Maschinenbindung der Lizenz. Ohne Treiber blieb der Wert leer, und bei einer STRICT-Lizenz
+            wartete der Dienst fuer immer (22.09.2026, Installation aus dem Paket). -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-mcp-server-webmvc</artifactId>
